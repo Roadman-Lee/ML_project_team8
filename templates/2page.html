@@ -73,7 +73,7 @@
             <ul>
                 {% for i in img_list %}
                     {% set title = i.title %}
-                    <li><a href="/2page/{{title}}">{{title}}</a> </li>
+                    <li><a href="/2page/{{title}}">{{loop.index}}  {{title}}</a> </li>
                 {% endfor %}
             </ul>
         </div>

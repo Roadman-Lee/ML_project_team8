@@ -8,10 +8,8 @@
 
 {% block main %}
     <div>
-        <h1>1페이지</h1>
-        <p class="important">진자템플릿을 사용한 1페이지임</p>
+        {{ addtitle(1) }}
     </div>
-    <hr>
     <ul>
         {% for row in rows %}
             {% set gu_name = row.MSRSTE_NM %}

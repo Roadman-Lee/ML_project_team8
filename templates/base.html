@@ -16,6 +16,11 @@
     <div class="main_container">
         {% include "nav.html" %}
         <div class="content_container">
+            {% macro addtitle(page) %}
+            <h1>{{page}}페이지</h1>
+            <p class="important">진자템플릿을 사용한 {{page}}페이지임</p>
+            <hr>
+            {% endmacro %}
             {% block main %}
             {% endblock %}
             <footer class="footer_container">

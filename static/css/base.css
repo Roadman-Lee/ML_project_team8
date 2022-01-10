@@ -61,7 +61,7 @@ h1{
 
 
 .footer_container {
-    background-color: rgb(200, 200, 200);
-    color: white;
+    /* background-color: rgb(200, 200, 200); */
+    color: #b2b2b2;
     margin-top: 300px;
 }
