@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - 8조 프로젝트</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="/static/js/base.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <div class="main_container">
+        {% include "nav.html" %}
+        <div class="content_container">
+            {% block main %}
+            {% endblock %}
+            <footer class="footer_container">
+                <p>&copy; Copyright by You All Right Reserved</p> 
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
