@@ -1,4 +1,6 @@
 from flask import Flask, render_template, jsonify, request, session, redirect, url_for
+import requests
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,7 +9,10 @@ def main():
 
 @app.route('/1page/')
 def one_page():
-    return render_template("1page.html")
+    r = requests.get('http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99')
+    response = r.json()
+    rows = response['RealtimeCityAir']['row']
+    return render_template("1page.html", rows=rows)
 
 @app.route('/2page/')
 def two_page():

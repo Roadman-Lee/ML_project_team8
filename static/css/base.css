@@ -1,4 +1,7 @@
 /* 전체적용 */
+body {
+    line-height: 1.2;
+}
 
 h1{
     font-size: 2rem;

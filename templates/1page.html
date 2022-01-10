@@ -11,4 +11,12 @@
         <h1>1페이지</h1>
         <p class="important">진자템플릿을 사용한 1페이지임</p>
     </div>
+    <hr>
+    <ul>
+        {% for row in rows %}
+            {% set gu_name = row.MSRSTE_NM %}
+            {% set gu_mise = row.IDEX_MVL %}
+            <li>{{ gu_name }}: {{ gu_mise }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
