@@ -4,11 +4,164 @@
 
 {% block head %}
 {{ super() }}
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        border: 1px solid rgb(37, 37, 37);
+        border-radius: 4px;
+        background-color: #f5f5f5;
+        font-weight: 400;
+        color: rgb(37, 37, 37);
+        padding: 12px;
+        width: 200px;
+        text-align: left;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        /*다른 요소들보다 앞에 배치*/
+        font-weight: 400;
+        background-color: #f9f9f9;
+        min-width: 200px;
+    }
+
+    .dropdown-content a {
+        display: block;
+        text-decoration: none;
+        color: rgb(37, 37, 37);
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ececec
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 4;
+        display: none;
+    }
+
+    .modal .loading {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 6;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .modal .loading:before{
+        content: "";
+        z-index: 7;
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        background-image: conic-gradient(rgb(255, 255, 255), rgb(0, 255, 255));
+        animation: rotate_image 2s infinite linear;
+
+    }
+
+    .modal .loading:after{
+        content: "LOADING";
+        color: white;
+        font-size: 2rem;
+        position: absolute;
+        z-index: 8;
+        background-color: #b2b2b2;
+        border-radius: 50%;
+        width: 92%;
+        height: 92%;
+        top: 4%;
+        left: 4%;
+        display: grid;
+        place-items: center;
+    }
+
+    @keyframes rotate_image{
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .modal .modal_background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .open_modal {
+        width: 200px;
+        height: 50px;
+        cursor: pointer;
+    }
+</style>
+<script>
+    function show_modal() {
+        $('#test_modal').show();
+        $('html').css("overflow", "hidden");
+    }
+    function close_modal() {
+        $('.modal').hide();
+        $('html').css("overflow", "auto");
+    }
+</script>
 {% endblock %}
 
 {% block main %}
-    <div>
-        <h1>3페이지</h1>
-        <p class="important">진자템플릿을 사용한 3페이지임</p>
+<div class="content_wrap">
+    <h1>3페이지</h1>
+    <p class="important">진자템플릿을 사용한 3페이지임</p>
+    <hr>
+    <div class="dropdown">
+        <button class="dropbtn">
+            View More
+        </button>
+        <div class="dropdown-content">
+            <a href="#">profile</a>
+            <a href="#">write a post</a>
+            <a href="#">settings</a>
+        </div>
     </div>
+    <a href="https://velog.io/@kauthenticity/HTML-CSS-%EB%93%9C%EB%A1%AD%EB%8B%A4%EC%9A%B4-%EB%A9%94%EB%89%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0">출처 : kauthenticity.log</a>
+    <hr>
+    <div class="modal" id="test_modal">
+        <div class="loading">
+        </div>
+        <button onclick="close_modal()" class="modal_background"></button>
+    </div>
+    <button class="open_modal" onclick="show_modal()">모달열기</button>
+
+</div>
 {% endblock %}
