@@ -3,10 +3,24 @@
 {% block title %}결과{% endblock %}
 
 {% block head %}
-{{ super() }}
 <link rel="stylesheet" href="/static/css/pokedex.css">
 <script src="/static/js/pokedex.js"></script>
 {% endblock %}
 
 {% block main %}
+    <div id = "dex_container">
+        <div id ="dex_upper">
+            <div class = "img_box">
+                <img id = "image" src="/static/image/오박사.png">
+            </div>
+        </div>
+        <div id ="dex_middle">
+        </div>
+        <div id ="dex_lower">
+            <div class = "desc_box">
+
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
