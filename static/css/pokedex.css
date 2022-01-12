@@ -5,8 +5,9 @@
 }
 /*도감 전체*/
 #dex_container{
+    background-color: black;
     max-width: 428px;
-    height: 900px;
+    max-height: 926px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -14,115 +15,35 @@
     margin-top: 50px; /*얼마나 띄울지 진영님과 얘기하기*/
 }
 /*도감 윗부분*/
-#dex_upper{
-    background-image: url("/static/image/pokedex_upper.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(203,193,201,0.49);
+#dex_upper {
+    background-color: rgba(203, 193, 201, 0.49);
     max-width: 428px;
-    height: 27%;
-    width:100%;
+    width: 100%;
+}
+.upper_wrapper {
+    position: relative;
+    width: 100%;
+    height: 40%;
     display:flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
+}
+.upper_layer img{
+    width: 100%;
 }
 
 #dex_upper .img_box{
     border: 3px solid black;
-    width: 60%;
-    height: 60%;
-    margin-right: 6%;
+    width: 80%;
+    height: 70%;
     background-color: lightblue;
-    margin-left: 7%;
-    margin-bottom: 3%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    position: absolute;
+    margin-top: 5%;
 }
 #dex_upper .img_box #image{
     width: 99%;
-    height: 90%;
+    height: 100%;
     border: 2px solid grey;
 }
-/*도감 중간*/
-#dex_middle{
-    background-image: url("/static/image/pokedex_middle2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: rgba(203,193,201,0.49);
-    width: 100%;
-    height: 3.2%;
-    margin:0;
-}
-/*도감 밑부분*/
-#dex_lower{
-    background-image: url("/static/image/pokedex_lower.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(203,193,201,0.49);
-    max-width: 428px;
-    height: 26%;
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 0;
-}
-#dex_lower #desc_box{
-    border: 3px solid black;
-    width: 55%;
-    height: 80%;
-    margin-right: 3%;
-    background-color: rgba(185,238,174,0.89);
-    margin-left: 6%;
-    margin-bottom: 3%;
-    font-family: 'pokemon';
-    font-size: 14px;
-    display:flex;
-}
-#dex_lower #desc_box #p_wrapper{
-    margin-left: 5%;
-    margin-right: 3%;
-    height: 80%;
-    margin-top: 0;
-}
-#desc_box #p_wrapper .ps{
-    border-bottom: 1px solid grey;
-    height: 20px;
-    margin : 1% 0 1% 0;
-}
-#desc_box #p_wrapper #name{
-    margin-top: 3%;
-}
-#desc_box #p_wrapper .line{
-    border: 0;
-}
-#desc_box #p_wrapper #alert{
-    font-size: 9px;
-}
-.bts{
-    height: 80%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-right: 1%;
 
-}
-.bts #evo_check{
-    width :30px;
-    height: 30px;
-    border-radius: 60%;
-    background-color: yellow;
-}
-.bts #home{
-    width : 30px;
-    height: 30px;
-    border-radius: 60%;
-    background-color: lawngreen;
-}
+
