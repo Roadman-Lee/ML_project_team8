@@ -1,0 +1,72 @@
+.main-wrapper {
+    width: 428px;
+    height: 926px;
+    margin: auto;
+    text-align: center;
+}
+
+.main-header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.main-header1 {
+    width: 100%;
+    height: 50%;
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.main-header2 {
+    width: 100%;
+    height: 50%;
+    border-top: 7px solid;
+}
+
+.main-header3 {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 7px solid;
+    border-radius: 50%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.droh {
+    margin-top: 80px;
+}
+
+.msg {
+    width: 100%;
+    height: 20%;
+    margin-top: 50px;
+    position: relative;
+}
+
+.msgbox {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@font-face {
+    font-family: 'pokemon';
+    src: url('/static/font/pokemongsc.ttf') format('truetype');
+}
+
+.text {
+    font-family: 'pokemon';
+    font-size: x-large;
+    left: 5%;
+    bottom: 70px;
+    position: absolute;
+    transform: tranlate(-50%, -50%);
+}
