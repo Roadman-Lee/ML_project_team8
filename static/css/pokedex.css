@@ -6,7 +6,7 @@
 /*도감 전체*/
 #dex_container{
     max-width: 428px;
-    height: 100vh;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-color: rgba(203,193,201,0.49);
     max-width: 428px;
-    height: 250px;
+    height: 27%;
     width:100%;
     display:flex;
     justify-content: center;
