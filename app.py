@@ -28,7 +28,8 @@ def upload_pic():
 
 @app.route('/pokedex/')
 def three_page():
-    return render_template("pokedex.html")
+    # DB에서 받아올 것.
+    return render_template("pokedex.html") #DB받아서 렌더템플릿할때 같이보내줄것
 
 ## 끝 ################################################################################################################################
 

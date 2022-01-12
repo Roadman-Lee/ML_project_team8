@@ -1,4 +1,9 @@
-
+/*폰트적용*/
+@font-face {
+    font-family: 'pokemon';
+    src: url('/static/font/pokemongsc.ttf') format('truetype');
+}
+/*도감 전체*/
 #dex_container{
     max-width: 428px;
     height: 1100px;
@@ -8,6 +13,7 @@
     margin: 0 auto;
     margin-top: 50px; /*얼마나 띄울지 진영님과 얘기하기*/
 }
+/*도감 윗부분*/
 #dex_upper{
     background-image: url("/static/image/pokedex_upper.png");
     background-size: contain;
@@ -22,6 +28,7 @@
     align-items: center;
     margin: 0;
 }
+
 #dex_upper .img_box{
     border: 3px solid black;
     width: 60%;
@@ -35,12 +42,12 @@
     justify-content: space-between;
 
 }
-#dex_upper .img_box img{
+#dex_upper .img_box #image{
     width: 99%;
     height: 90%;
     border: 2px solid grey;
-
 }
+/*도감 중간*/
 #dex_middle{
     background-image: url("/static/image/pokedex_middle.png");
     background-repeat: no-repeat;
@@ -51,6 +58,7 @@
     height: 7.1%;
     margin:0;
 }
+/*도감 밑부분*/
 #dex_lower{
     background-image: url("/static/image/pokedex_lower.png");
     background-size: contain;
@@ -63,4 +71,14 @@
     display: flex;
     align-items: center;
     margin-top: 0;
+}
+#dex_lower #desc_box{
+    border: 3px solid black;
+    width: 60%;
+    height: 60%;
+    margin-right: 6%;
+    background-color: lightblue;
+    margin-left: 7%;
+    margin-bottom: 3%;
+    font-family: 'pokemon';
 }
