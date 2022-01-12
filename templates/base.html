@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} - 8조 프로젝트</title>
+    <title>{% block title %}{% endblock %} - 닮은 포켓몬 찾기</title>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/base.css">
     <script src="/static/js/base.js"></script>
@@ -14,19 +14,8 @@
 </head>
 <body>
     <div class="main_container">
-        {% include "nav.html" %}
-        <div class="content_container">
-            {% macro addtitle(page) %}
-            <h1>{{page}}페이지</h1>
-            <p class="important">진자템플릿을 사용한 {{page}}페이지임</p>
-            <hr>
-            {% endmacro %}
-            {% block main %}
-            {% endblock %}
-            <footer class="footer_container">
-                <p>&copy; Copyright by You All Right Reserved</p> 
-            </footer>
-        </div>
+        {% block main %}
+        {% endblock %}
     </div>
     
 </body>
