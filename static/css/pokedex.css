@@ -46,4 +46,75 @@
     border: 2px solid grey;
 }
 
-
+/*도감 밑부분*/
+#dex_lower{
+    background-color: rgba(203,193,201,0.49);
+    max-width: 428px;
+    height: 100%;
+    width:100%;
+    display: flex;
+    margin-top: 0;
+}
+.lower_wrapper{
+    display:flex;
+    position: relative;
+}
+.lower_layer{
+    width: 100%;
+}
+.lower_layer img{
+    width: 100%;
+}
+#dex_lower #desc_box{
+    display:flex;
+    justify-content: space-around;
+    position: absolute;
+}
+.p_wrapper_box{
+    border: 3px solid black;
+    width: 75%;
+    max-height: 300px;
+    margin-top: 7%;
+    background-color: rgba(185,238,174,0.89);
+    margin-left: 6%;
+    margin-bottom: 3%;
+    font-family: 'pokemon';
+    font-size: 18px;
+}
+#dex_lower #desc_box #p_wrapper{
+    margin-left: 5%;
+    margin-right: 3%;
+    height: 80%;
+    margin-top: 0;
+}
+#desc_box #p_wrapper .ps{
+    border-bottom: 1px solid grey;
+    height: 20px;
+    margin : 1% 0 1% 0;
+}
+#desc_box #p_wrapper #name{
+    margin-top: 3%;
+}
+#desc_box #p_wrapper .line{
+    border: 0;
+}
+#desc_box #p_wrapper #alert{
+    font-size: 9px;
+}
+.bts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bts #evo_check{
+    width :30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: yellow;
+}
+.bts #home{
+    width : 30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: lawngreen;
+}
