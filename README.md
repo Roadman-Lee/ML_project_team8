@@ -1,5 +1,6 @@
 # ML_project_team8
 ## 주제 : 나와 닮은 포켓몬 찾기
+![GitHub last commit](https://img.shields.io/github/last-commit/grolarkim/ML_project_team8?style=plastic)
 
 ### 조원
 
