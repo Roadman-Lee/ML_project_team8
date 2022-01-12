@@ -1,3 +1,66 @@
+
+#dex_container{
+    max-width: 428px;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 50px; /*얼마나 띄울지 진영님과 얘기하기*/
+}
 #dex_upper{
     background-image: url("/static/image/pokedex_upper.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(203,193,201,0.49);
+    max-width: 428px;
+    height: 22%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#dex_upper .img_box{
+    border: 3px solid black;
+    width: 60%;
+    height: 60%;
+    margin-right: 6%;
+    background-color: lightblue;
+    margin-left: 7%;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#dex_upper .img_box img{
+    width: 99%;
+    height: 90%;
+    border: 2px solid grey;
+
+}
+#dex_middle{
+    background-image: url("/static/image/pokedex_middle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(203,193,201,0.49);
+    width: 100%;
+    height: 7.1%;
+    margin:0;
+}
+#dex_lower{
+    background-image: url("/static/image/pokedex_lower.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(203,193,201,0.49);
+    max-width: 428px;
+    height: 22%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
 }
