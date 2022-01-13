@@ -1,8 +1,3 @@
-/*폰트적용*/
-@font-face {
-    font-family: 'pokemon';
-    src: url('/static/font/pokemongsc.ttf') format('truetype');
-}
 /*도감 전체*/
 #dex_container{
     background-color: black;
