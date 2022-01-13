@@ -74,12 +74,12 @@ def upload_page():
 @app.route('/api/upload/', methods=['POST'])
 def upload_pic():
     # 클라이언트로부터 정보받아옴
+    title = request.form['title_give']
     file = request.files['file_give']
     # 해당 파일에서 확장자명만 추출
     extension = file.filename.split('.')[-1]
     # 파일 이름이 중복되면 안되므로, 지금 시간을 해당 파일 이름으로 만들어서 중복이 되지 않게 함!
-    today = datetime.now()
-    savetime = today.strftime('%Y-%m-%d-%H-%M-%S')
+    savetime = str(title)
     filename = f'{savetime}'
     # 파일 저장 경로 설정 (파일은 db가 아니라, 서버 컴퓨터 자체에 저장됨)
     save_to = f'static/{filename}.{extension}'
@@ -91,7 +91,7 @@ def upload_pic():
     predict = pred_result(img)
 
     # 아래와 같이 입력하면 db에 추가 가능!
-    doc = {'img':f'{filename}.{extension}', 'pred':predict}
+    doc = {'title': savetime , 'img':f'{filename}.{extension}', 'pred':predict}
     db.mlimage2.insert_one(doc)
 
     return jsonify({'msg':'사진 분석 완료!'})
