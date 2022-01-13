@@ -37,6 +37,7 @@
     height: 70%;
     background-color: lightblue;
     display: flex;
+    justify-content: center; /*사진이미지가 가운데에 오도록*/
     position: absolute;
     margin-top: 5%;
 }
