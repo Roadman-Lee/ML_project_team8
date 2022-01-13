@@ -1,11 +1,13 @@
+
 .main-wrapper {
     width: 428px;
     height: 926px;
     margin: auto;
     text-align: center;
+    background-color: rgba(203,193,201,0.49);
 }
 
-.main-header {
+#main-header {
     width: 100%;
     height: 20%;
     display: flex;
@@ -17,7 +19,7 @@
     box-sizing: border-box;
 }
 
-.main-header1 {
+#main-header1 {
     width: 100%;
     height: 50%;
     background-color: red;
@@ -25,13 +27,16 @@
     border-top-right-radius: 10px;
 }
 
-.main-header2 {
+#main-header2 {
     width: 100%;
     height: 50%;
     border-top: 7px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
 }
 
-.main-header3 {
+#main-header3 {
     width: 50px;
     height: 50px;
     background-color: white;
@@ -39,34 +44,39 @@
     border-radius: 50%;
     position: absolute;
     object-fit: cover;
+    cursor: pointer;
 }
 
-.droh {
-    margin-top: 80px;
+.main {
+    width: 100%;
+    height: 600px;
+    background-image: url("/static/img/background2.PNG");
+}
+
+#droh {
+    margin-top: 110px;
+    margin-bottom: 110px;
 }
 
 .msg {
     width: 100%;
-    height: 20%;
-    margin-top: 50px;
+    height: 15%;
     position: relative;
 }
 
-.msgbox {
+#msgbox {
     max-width: 100%;
     max-height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
-@font-face {
-    font-family: 'pokemon';
-    src: url('/static/font/pokemongsc.ttf') format('truetype');
-}
-
-.text {
+#text {
     font-family: 'pokemon';
     font-size: x-large;
     left: 5%;
-    bottom: 70px;
+    bottom: 40px;
     position: absolute;
     transform: tranlate(-50%, -50%);
 }
