@@ -1,7 +1,64 @@
-/*폰트적용*/
-@font-face {
-    font-family: 'pokemon';
-    src: url('/static/font/pokemongsc.ttf') format('truetype');
+@media(min-width: 429px) {/*데스크탑화면에서만 보일 친구들*/
+    body{
+        background-image: linear-gradient(
+                rgba(192,192,192,0.5),
+                rgba(192,192,192,0.5) ),
+                url("/static/img/3page_back2.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        /*display: flex;*/
+        /*position:relative;*/
+        }
+    #dex_container{
+        margin: 10% auto;
+        position:relative;
+    }
+    .main_container{
+        margin:0 auto;
+    }
+}
+
+@media(max-width:428px){/*모바일화면에서만 보일 친구들*/
+    body{
+        background-image: none;
+    }
+    #dex_container{
+        margin: 0 auto;
+    }
+}
+/*메세지 상자*/
+#msg_container {
+    display: flex;
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(65%);
+    /*fixed로 맞춰논 기준부터 x축, y축 이동을 해주는 친구!*/
+}
+#msg_wrapper{
+    font-family: "pokemon";
+    display: flex;
+    position: relative;
+    width : 60%;
+    margin : auto;
+}
+#msg_wrapper img{
+    width: 100%;
+}
+#msg_wrap{
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+#msg_wrap p{
+    font-size: 40px;
+    margin: 5% 0 0 4%;
+}
+#msg_wrap img{
+    width: 20px;
+    height: 10px;
 }
 /*도감 전체*/
 #dex_container{
@@ -11,8 +68,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 auto;
-    margin-top: 50px; /*얼마나 띄울지 진영님과 얘기하기*/
 }
 /*도감 윗부분*/
 #dex_upper {
@@ -37,6 +92,7 @@
     height: 70%;
     background-color: lightblue;
     display: flex;
+    justify-content: center; /*사진이미지가 가운데에 오도록*/
     position: absolute;
     margin-top: 5%;
 }
@@ -91,23 +147,28 @@
     height: 80%;
     margin-top: 0;
 }
-#desc_box #p_wrapper .ps{
+#desc_box #p_wrapper #name{
+    font-size: 25px;
+    height: 35px;
+    border-bottom: 3px solid grey;
+    margin : 3% 0 2% 0;
+    text-align: center;
+}
+#desc_box #p_wrapper #type{
     border-bottom: 1px solid grey;
     height: 25px;
     margin : 1% 0 1% 0;
 }
+#desc_box #p_wrapper #class{
+    border-bottom: 3px solid grey;
+    height: 25px;
+    margin : 1% 0 1% 0;
+}
+#desc_box #p_wrapper #desc{
+    margin : 1% 5% 1% 5%;
+}
 #desc_box #p_wrapper .return{
     font-size: 13px;
-}
-#desc_box #p_wrapper #name{
-    font-size: 25px;
-    height: 35px;
-    border-bottom: 1px solid grey;
-    margin : 3% 0 2% 0;
-}
-
-#desc_box #p_wrapper .line{
-    border: 0;
 }
 #desc_box #p_wrapper hr{
     border : 1px solid transparent; /*초록색버튼 설명부분이 너무 밑으로 붙어서 hr로 선하나 추가하고 색없앰*/
