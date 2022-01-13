@@ -67,9 +67,11 @@
 }
 #dex_lower #desc_box{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: absolute;
+    height: 90%; /*전체 높이잡아주고*/
 }
+/**/
 .p_wrapper_box{
     border: 3px solid black;
     width: 75%;
@@ -79,7 +81,9 @@
     margin-left: 6%;
     margin-bottom: 3%;
     font-family: 'pokemon';
-    font-size: 18px;
+    font-size: 20px;
+    overflow-y:scroll; /*넘치면 스크롤이 생기도록 해줌. hidden은 넘치면 안보이게함*/
+    height: 90%;/*밑부분의 전체높이에서 박스의 높이를 지정*/
 }
 #dex_lower #desc_box #p_wrapper{
     margin-left: 5%;
@@ -89,17 +93,24 @@
 }
 #desc_box #p_wrapper .ps{
     border-bottom: 1px solid grey;
-    height: 20px;
+    height: 25px;
     margin : 1% 0 1% 0;
 }
-#desc_box #p_wrapper #name{
-    margin-top: 3%;
+#desc_box #p_wrapper .return{
+    font-size: 13px;
 }
+#desc_box #p_wrapper #name{
+    font-size: 25px;
+    height: 35px;
+    border-bottom: 1px solid grey;
+    margin : 3% 0 2% 0;
+}
+
 #desc_box #p_wrapper .line{
     border: 0;
 }
-#desc_box #p_wrapper #alert{
-    font-size: 9px;
+#desc_box #p_wrapper hr{
+    border : 1px solid transparent; /*초록색버튼 설명부분이 너무 밑으로 붙어서 hr로 선하나 추가하고 색없앰*/
 }
 .bts{
     display: flex;
