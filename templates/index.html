@@ -10,17 +10,17 @@
 
 {% block main %}
 <div class="main-wrapper">
-<div class="main-header">
-<div class="main-header1"></div>
-<div class="main-header3"></div>
-<div class="main-header2"></div>
+<div id="main-header">
+<div id="main-header1"></div>
+<div id="main-header3" onclick="location.href='/upload'"></div>
+<div id="main-header2"></div>
 </div>
-
-<img class="droh" src="/static/img/droh.PNG">
-
+<div class="main">
+    <img id="droh" src="/static/img/droh1.PNG">
+</div>
 <div class="msg">
-    <img class="msgbox" src="/static/img/msgbox.jpg">
-    <div class="text"> 명준 진영 가을 상호 성<br>포켓몬 머신러닝 프로젝트<br>당신과 닮은 포켓몬은? </div>
+    <img id="msgbox" src="/static/img/msgbox.jpg">
+    <div id="text"> 명준 진영 가을 상호 성<br>포켓몬 머신러닝 프로젝트<br>당신과 닮은 포켓몬은? </div>
 </div>
 </div>
 {% endblock %}
