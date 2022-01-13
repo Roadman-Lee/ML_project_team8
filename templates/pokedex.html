@@ -8,19 +8,56 @@
 {% endblock %}
 
 {% block main %}
-    <div id = "dex_container">
+    <div id = "dex_container"><!---->
+        <!--도감 윗부분-->
         <div id ="dex_upper">
-            <div class = "img_box">
-                <img id = "image" src="/static/image/오박사.png">
+            <div class ="upper_wrapper">
+                <div class = "upper_layer">
+                    <img src="/static/img/pokedex_upper.png">
+                </div>
+                <div class = "img_box">
+                    <!--닮은 포켓몬 이미지 파일 받아서 들어갈 곳-->
+                    <img id = "img" src="/static/image/오박사.png">
+                </div>
             </div>
-        </div>
-        <div id ="dex_middle">
-        </div>
-        <div id ="dex_lower">
-            <div class = "desc_box">
 
+        </div>
+       <!--도감 밑부분-->
+        <div id ="dex_lower">
+            <div class = "lower_wrapper">
+                <div class = "lower_layer">
+                    <img src="/static/img/pokedex_lower.png">
+                </div>
+                <div id = "desc_box">
+                    <div class = "p_wrapper_box">
+                         <div id ="p_wrapper">
+                            <!--세부 사항들 들어갈 곳-->
+                            <p id ="name" >당신은 000 였군요!! </p>
+                            <p id ="type" class ="ps">타입 : </p>
+                            <p id ="class" class ="ps">분류 : </p>
+                            <p id ="desc" >설명 : 태양에너지를 양분으로 큰 꽃을 피운다. 양지를 향해 이끌려가듯이 이동한다.
+                            태양에너지를 양분으로 큰 꽃을 피운다. 양지를 향해 이끌려가듯이 이동한다.
+                            태양에너지를 양분으로 큰 꽃을 피운다. 양지를 향해 이끌려가듯이 이동한다.
+                            태양에너지를 양분으로 큰 꽃을 피운다. 양지를 향해 이끌려가듯이 이동한다.
+                            </p>
+                            <hr style="color: gray" size="1px">
+                            <p class = "return"> 노란색 버튼을 누르면 파일올리는 페이지로 돌아갑니다. </p>
+                            <p class = "return"> 초록색 버튼을 누르면 첫페이지로 돌아갑니다.</p>
+                            <hr>
+                         </div>
+                    </div>
+                    <div class = "bts">
+                        <button id = "evo_check" onclick = "location.href='/upload'"></button>
+                        <button id = "home" onclick = "location.href='/'""></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 {% endblock %}
+<script>
+    function show_evolution(){
+
+    }
+</script>

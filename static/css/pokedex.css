@@ -1,66 +1,131 @@
-
+/*폰트적용*/
+@font-face {
+    font-family: 'pokemon';
+    src: url('/static/font/pokemongsc.ttf') format('truetype');
+}
+/*도감 전체*/
 #dex_container{
+    background-color: black;
     max-width: 428px;
-    height: 1100px;
+    max-height: 926px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 0 auto;
     margin-top: 50px; /*얼마나 띄울지 진영님과 얘기하기*/
 }
-#dex_upper{
-    background-image: url("/static/image/pokedex_upper.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(203,193,201,0.49);
+/*도감 윗부분*/
+#dex_upper {
+    background-color: rgba(203, 193, 201, 0.49);
     max-width: 428px;
-    height: 22%;
-    width:100%;
+    width: 100%;
+}
+.upper_wrapper {
+    position: relative;
+    width: 100%;
+    height: 40%;
     display:flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
 }
+.upper_layer img{
+    width: 100%;
+}
+
 #dex_upper .img_box{
     border: 3px solid black;
-    width: 60%;
-    height: 60%;
-    margin-right: 6%;
+    width: 80%;
+    height: 70%;
     background-color: lightblue;
-    margin-left: 7%;
-    margin-bottom: 3%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    position: absolute;
+    margin-top: 5%;
 }
-#dex_upper .img_box img{
+#dex_upper .img_box #image{
     width: 99%;
-    height: 90%;
+    height: 100%;
     border: 2px solid grey;
+}
 
-}
-#dex_middle{
-    background-image: url("/static/image/pokedex_middle.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: rgba(203,193,201,0.49);
-    width: 100%;
-    height: 7.1%;
-    margin:0;
-}
+/*도감 밑부분*/
 #dex_lower{
-    background-image: url("/static/image/pokedex_lower.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     background-color: rgba(203,193,201,0.49);
     max-width: 428px;
-    height: 22%;
+    height: 100%;
     width:100%;
     display: flex;
-    align-items: center;
     margin-top: 0;
+}
+.lower_wrapper{
+    display:flex;
+    position: relative;
+}
+.lower_layer{
+    width: 100%;
+}
+.lower_layer img{
+    width: 100%;
+}
+#dex_lower #desc_box{
+    display:flex;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 90%; /*전체 높이잡아주고*/
+}
+/**/
+.p_wrapper_box{
+    border: 3px solid black;
+    width: 75%;
+    max-height: 300px;
+    margin-top: 7%;
+    background-color: rgba(185,238,174,0.89);
+    margin-left: 6%;
+    margin-bottom: 3%;
+    font-family: 'pokemon';
+    font-size: 20px;
+    overflow-y:scroll; /*넘치면 스크롤이 생기도록 해줌. hidden은 넘치면 안보이게함*/
+    height: 90%;/*밑부분의 전체높이에서 박스의 높이를 지정*/
+}
+#dex_lower #desc_box #p_wrapper{
+    margin-left: 5%;
+    margin-right: 3%;
+    height: 80%;
+    margin-top: 0;
+}
+#desc_box #p_wrapper .ps{
+    border-bottom: 1px solid grey;
+    height: 25px;
+    margin : 1% 0 1% 0;
+}
+#desc_box #p_wrapper .return{
+    font-size: 13px;
+}
+#desc_box #p_wrapper #name{
+    font-size: 25px;
+    height: 35px;
+    border-bottom: 1px solid grey;
+    margin : 3% 0 2% 0;
+}
+
+#desc_box #p_wrapper .line{
+    border: 0;
+}
+#desc_box #p_wrapper hr{
+    border : 1px solid transparent; /*초록색버튼 설명부분이 너무 밑으로 붙어서 hr로 선하나 추가하고 색없앰*/
+}
+.bts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bts #evo_check{
+    width :30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: yellow;
+}
+.bts #home{
+    width : 30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: lawngreen;
 }
