@@ -1,8 +1,8 @@
 body {
-    background-image: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)),
-    url("/static/img/page22.PNG");
+    /*background-image: linear-gradient(*/
+    /*        rgba(0, 0, 0, 0.6),*/
+    /*        rgba(0, 0, 0, 0.6)),*/
+    background-image: url("/static/img/page22.PNG");
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -19,9 +19,9 @@ body {
 }
 
 .main-wrapper {
-    /*background-image: url("/static/img/page22.jpeg");*/
-    /*background-size: 100% 100%;*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/static/img/page22.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     max-width: 428px;
     max-height: 926px;
     width: 100%;
@@ -32,30 +32,33 @@ body {
     margin: 0 auto;
 }
 
-#main-header {
-    height: 70px;
-    display: flex;
-    justify-content: flex-end;
-}
+/*#main-header {*/
+/*    height: 70px;*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
 
-#ball {
-    max-height: 100%;
-    width: 50px;
-    height: 50px;
-}
+/*#ball {*/
+/*    max-height: 100%;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
 
-.main {
+.container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     position: relative;
 }
 
 .img_wrap {
-    padding-top: 100px;
+    margin-top: 50px;
+    padding-top: 200px;
     width: 80%;
-    height: 350px;
+    height: 40%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .img_wrap img {
     max-width: 100%;
@@ -64,16 +67,32 @@ body {
     margin: auto;
 }
 
-.msg {
+.msgbox1 {
+    max-width: 428px;
     width: 100%;
-    height: 150px;
+    height: 15%;
     position: absolute;
-    bottom: 0;
+    margin-top: 500px;
+    z-index: 2;
 }
 
 #msg1 {
-    margin-top: 20px;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 20px;
+}
+
+.msgbox2 {
+    width: 428px;
+    position: absolute;
+    margin-top: 500px;
+    z-index: 1;
+}
+
+#msg2 {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
 }
