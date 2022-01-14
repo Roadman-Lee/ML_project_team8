@@ -10,19 +10,19 @@
 
 {% block main %}
     <div class="main-wrapper">
-        <div id="main-header">
-            <img id="ball" src="/static/img/ball.PNG">
-        </div>
         <div class="container">
             <div class="img_wrap">
                 <img id="img"/>
             </div>
-            <input type="file" id="input_img"/>
-            <div class="msg">
-                <img id="msg1" src="/static/img/msg1.PNG">
-            </div>
-{#            <img id="button" onclick="location.href='/pokedex/'" src="/static/img/Silhouette.png">#}
+        </div>
+        <input type="file" id="input_img"/>
+        <div class="msgbox1">
+            <img id="msg1" src="/static/img/msg1.PNG" onclick="box_change()">
+        </div>
+        <div class="msgbox2" id="pop">
+            <img id="msg2" src="/static/img/msg2.jpg" onclick="posting_img()">
         </div>
     </div>
 
 {% endblock %}
+

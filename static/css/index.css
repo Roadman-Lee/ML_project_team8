@@ -6,6 +6,7 @@
                 url("/static/img/1page.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        overflow: hidden;
     }
 
     .main-wrapper {
