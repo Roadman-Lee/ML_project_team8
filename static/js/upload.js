@@ -19,6 +19,15 @@ function handleImgFileSelect(e) {
     });
 }
 
+function show_msg(){
+    $('#bye').hide();
+}
+
+function box_change(){
+    var msg2 = document.getElementById('pop');
+        msg2.style.zIndex = '5';
+}
+
 function posting_img() {
     let d = new Date()
     let time = d.getTime()
@@ -40,5 +49,5 @@ function posting_img() {
             window.location.href = '/pokedex/' + title
         }
     });
-}
 
+}

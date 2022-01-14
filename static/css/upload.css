@@ -1,35 +1,32 @@
-@media(min-width: 429px) {
-    body {
-        background-image: linear-gradient(
-                rgba(0, 0, 0, 0.6),
-                rgba(0, 0, 0, 0.6)),
-        url("/static/img/page22.png");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
 
+body{
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("/static/img/page22.PNG");
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+@media(min-width: 429px) {
+    body{
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("/static/img/page22.PNG");
+    background-size: 100% 100%;
+    background-repeat: repeat;
+}
     .main-wrapper {
         background-color: rgba(225, 225, 225, 0);
     }
 }
-
 @media(max-width: 428px){
     body {
         background-image: none;
     }
-
-/*    .main-wrapper{*/
-
-/*    }*/
 }
-
-
-/*.main-wrapper {*/
-/*    max-width: 428px;*/
-/*    max-height: 926px;*/
-/*    text-align: center;*/
-/*    background-color: rgba(203,193,201,0.49);*/
-/*}*/
 
 .main-wrapper {
     background-image: url("/static/img/page22.jpeg");
@@ -42,68 +39,36 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-}
-
-#main-header {
-    height: 70px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#ball {
-    max-height: 100%;
-    width: 50px;
-    height: 50px;
+    margin: 120px auto 80px;
 }
 
 /*#main-header {*/
-/*    width: 100%;*/
-/*    height: 20%;*/
+/*    height: 70px;*/
 /*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
+/*    justify-content: flex-end;*/
 /*}*/
 
-/*#main-header1 {*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*    background-color: red;*/
-/*    border-top-left-radius: 10px;*/
-/*    border-top-right-radius: 10px;*/
-/*}*/
-
-/*#main-header2 {*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*    border-top: 7px solid;*/
-/*    border-bottom-left-radius: 10px;*/
-/*    border-bottom-right-radius: 10px;*/
-/*    background-color: white;*/
-/*}*/
-
-/*#main-header3 {*/
+/*#ball {*/
+/*    max-height: 100%;*/
 /*    width: 50px;*/
 /*    height: 50px;*/
-/*    background-color: white;*/
-/*    border: 7px solid;*/
-/*    border-radius: 50%;*/
-/*    position: absolute;*/
-/*    object-fit: cover;*/
-/*    cursor: pointer;*/
 /*}*/
-.main {
+
+.container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     position: relative;
 }
 
 .img_wrap {
-    padding-top: 100px;
+    margin-top: 50px;
+    padding-top: 200px;
     width: 80%;
-    height: 350px;
+    height: 40%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .img_wrap img {
     max-width: 100%;
@@ -112,46 +77,46 @@
     margin: auto;
 }
 
-.msg {
+.cover{
+    max-width: 428px;
     width: 100%;
-    height: 150px;
+    height: 16%;
     position: absolute;
-    bottom: 0;
+    margin-top: 500px;
+    z-index: 3;
+}
+#grass{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.msgbox1 {
+    max-width: 428px;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    margin-top: 500px;
+    z-index: 2;
 }
 
 #msg1 {
-    margin-top: 20px;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 20px;
 }
 
-/*#check {*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    cursor: pointer;*/
-/*}*/
+.msgbox2 {
+    max-width: 428px;
+    width: 100%;
+    position: absolute;
+    margin-top: 500px;
+    z-index: 1;
+}
 
-/*#button {*/
-/*    max-width: 80px;*/
-/*    max-height: 80px;*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*#check1 {*/
-/*    width:100px;*/
-/*    background-color: white;*/
-/*    border: 3px solid black;*/
-/*    border-radius: 50px;*/
-/*    color: red;*/
-/*    padding: 15px 0;*/
-/*    text-align: center;*/
-/*    text-decoration: none;*/
-/*    display: inline-block;*/
-/*    font-size: 15px;*/
-/*    font-weight: bold;*/
-/*    margin-top: 60px;*/
-/*    cursor: pointer;*/
-/*}*/
+#msg2 {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+}

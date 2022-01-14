@@ -14,6 +14,9 @@
 
 이성 : 백엔드
 
+### 결과 화면
+
+![image](https://user-images.githubusercontent.com/91328539/149513738-3c8926fc-0a2b-4e7d-89ee-c38dfe249063.png)
 
 #### 와이드 프레임
 ![](https://images.velog.io/images/grolar812/post/0ef78c6d-b79c-4693-8107-57fab6775dcf/image.png)
@@ -29,3 +32,4 @@
 | 3-1 | 예측 결과 및 정보 | GET | / |  |  |  |
 | 3-2 | (옵션)진화전/후 포켓몬 정보 | GET |  |  |  |  |
 |  |  |  |  |  |  |  |
+
