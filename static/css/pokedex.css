@@ -16,6 +16,44 @@
     .main_container{
         margin:0 auto;
     }
+    /*메세지 상자*/
+    #msg_container {
+        display: flex;
+        position: fixed;
+        width: 400px; /*창에따라 메세지박스 줄지않도록 px로 고정*/
+        height: 300px; /*창에따라 메세지박스 줄지않도록 px로 고정*/
+        min-height: 100px;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-10%);
+        /*fixed로 맞춰논 기준부터 x축, y축 이동을 해주는 친구!*/
+    }
+    #msg_wrapper{
+        font-family: "pokemon";
+        display: flex;
+        position: relative;
+        width : 100%;
+        margin : auto;
+    }
+    #msg_wrapper img{
+        width: 100%;
+    }
+    #msg_wrap{
+        width: 100%;
+        display: flex;
+        position: absolute;
+    }
+    #msg_wrap p{
+        font-size: 40px;
+        margin: 5% 0 0 4%;
+    }
+    #msg_wrap img{
+        width: 20px;
+        height: 10px;
+    }
+    #oh_box{
+        display: none;
+    }
 }
 
 @media(max-width:428px){/*모바일화면에서만 보일 친구들*/
@@ -24,42 +62,69 @@
     }
     #dex_container{
         margin: 0 auto;
+        flex:none;
+    }
+    /*오박사 이미지*/
+    #oh_box{
+        margin-top: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        max-width: 428px;
+    }
+    #oh_img img{
+        width: 100%;
+    }
+    /*메세지 상자*/
+    #msg_container {
+        display: flex;
+        min-width: 200px;
+        width: 100%;
+        margin-top:10%;
+    }
+    #msg_wrapper{
+        font-family: "pokemon";
+        display: flex;
+        position: relative;
+        width : 100%;
+        margin : auto;
+    }
+    #msg_wrapper img{
+        width: 100%;
+        height: auto;
+    }
+    #msg_wrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+    }
+    #msg_wrap p{
+        font-size: 25px;
+        margin: 6% 0 0 6%;
+    }
+    #msg_wrap img{
+        width: 20px;
+        height: 10px;
+    }
+    #desc_box #p_wrapper #name{
+        font-size: 5%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #type{
+        font-size: 80%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #class{
+        font-size: 80%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #desc{
+        font-size: 80%;
     }
 }
-/*메세지 상자*/
-#msg_container {
-    display: flex;
-    position: fixed;
-    width: 50%;
-    height: 20%;
-    top:50%;
-    left:50%;
-    transform: translateX(-50%) translateY(65%);
-    /*fixed로 맞춰논 기준부터 x축, y축 이동을 해주는 친구!*/
-}
-#msg_wrapper{
-    font-family: "pokemon";
-    display: flex;
-    position: relative;
-    width : 60%;
-    margin : auto;
-}
-#msg_wrapper img{
-    width: 100%;
-}
-#msg_wrap{
-    width: 100%;
-    display: flex;
-    position: absolute;
-}
-#msg_wrap p{
-    font-size: 40px;
-    margin: 5% 0 0 4%;
-}
-#msg_wrap img{
-    width: 20px;
-    height: 10px;
-}
+
 /*도감 전체*/
 #dex_container{
     background-color: black;

@@ -3,6 +3,7 @@ $(document).ready(function (){//페이지 불러와지면
 })
 function clickmsg(){
     $('#msg_container').hide();
+    $('#oh_box').hide();
     $('#dex_container').show();
 }
 function show_mon(){
