@@ -51,7 +51,7 @@
         width: 20px;
         height: 10px;
     }
-    #oh_img{
+    #oh_box{
         display: none;
     }
 }
@@ -107,6 +107,21 @@
     #msg_wrap img{
         width: 20px;
         height: 10px;
+    }
+    #desc_box #p_wrapper #name{
+        font-size: 5%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #type{
+        font-size: 80%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #class{
+        font-size: 80%;
+        overflow-y: scroll;
+    }
+    #desc_box #p_wrapper #desc{
+        font-size: 80%;
     }
 }
 
