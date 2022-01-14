@@ -6,13 +6,4 @@ function clickmsg(){
     $('#oh_box').hide();
     $('#dex_container').show();
 }
-function show_mon(){
-    $.ajax({
-        type: 'GET',
-        url: '/pokedex/',
-        data: {},
-        success: function (response){
-         alert('두구두구 당신은 어떤 포켓몬과 닮았을까요?')
-        }
-    })
-}
+

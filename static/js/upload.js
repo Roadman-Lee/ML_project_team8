@@ -19,9 +19,13 @@ function handleImgFileSelect(e) {
     });
 }
 
+function show_msg(){
+    $('#bye').hide();
+}
+
 function box_change(){
-    var wrap = document.getElementById('pop');
-           wrap.style.zIndex = '3';
+    var msg2 = document.getElementById('pop');
+        msg2.style.zIndex = '5';
 }
 
 function posting_img() {

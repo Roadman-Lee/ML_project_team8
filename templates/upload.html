@@ -11,11 +11,14 @@
 {% block main %}
     <div class="main-wrapper">
         <div class="container">
-            <div class="img_wrap">
-                <img id="img"/>
+            <div class="img_wrap" >
+                <img id="img" onload="show_msg()" />
             </div>
         </div>
         <input type="file" id="input_img"/>
+        <div class="cover" id ="bye">
+            <img id="grass" src="/static/img/cover.png" >
+        </div>
         <div class="msgbox1">
             <img id="msg1" src="/static/img/msg1.PNG" onclick="box_change()">
         </div>
