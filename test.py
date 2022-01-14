@@ -64,3 +64,4 @@ for i in range(1, 152):
         "desc": desc,
     }
     db.pokemon.insert_one(dict)
+# 다됬다.
