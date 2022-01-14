@@ -18,3 +18,27 @@ function handleImgFileSelect(e) {
         reader.readAsDataURL(f);
     });
 }
+
+function posting_img() {
+    let d = new Date()
+    let time = d.getTime()
+    let title = String(time)
+    let file = $('#input_img')[0].files[0]
+    let form_data = new FormData()
+    form_data.append("file_give", file)
+    form_data.append("title_give", title)
+
+    $.ajax({
+        type: "POST",
+        url: "/api/upload/",
+        data: form_data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            alert(response["msg"])
+            window.location.href = '/pokedex/' + title
+        }
+    });
+}
+
