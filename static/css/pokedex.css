@@ -250,10 +250,12 @@
     height: 30px;
     border-radius: 60%;
     background-color: yellow;
+    cursor: pointer;
 }
 .bts #home{
     width : 30px;
     height: 30px;
     border-radius: 60%;
     background-color: lawngreen;
+    cursor: pointer;
 }
