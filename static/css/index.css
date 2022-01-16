@@ -32,7 +32,7 @@
         text-align: center;
         margin:0 0 10% 4%;
         animation-name: color_change;
-        animation-duration: 5s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
     }
     @keyframes color_change {
