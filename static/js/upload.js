@@ -20,7 +20,21 @@ function handleImgFileSelect(e) {
 }
 
 function show_msg(){
-    $('#bye').hide();
+    //이미지 사라지는 것을 1초뒤로 딜레이.
+    setTimeout(function(){$('#bye').hide();},1000);
+    //이미지 크기 조절 애니메이션
+    $('#img').animate({
+        width: '50%',height:'auto'
+    },500,function() {
+        $(this).animate({
+            width: '90%',height:'auto'
+        }, 200, function () {
+            $(this).animate({
+                    width: '70%',height:'auto'
+                },
+                300);
+        });
+    });
 }
 
 function box_change(){
