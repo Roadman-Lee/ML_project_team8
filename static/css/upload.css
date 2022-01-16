@@ -19,27 +19,38 @@ body{
     background-repeat: repeat;
 }
     .main-wrapper {
+        /*배경화면 검정색 필터 */
         background-color: rgba(225, 225, 225, 0);
+        background-image: url("/static/img/page22.jpeg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        max-width: 428px;
+        max-height: 926px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 120px auto 80px;
     }
 }
 @media(max-width: 428px){
     body {
         background-image: none;
     }
-}
-
-.main-wrapper {
-    background-image: url("/static/img/page22.jpeg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    max-width: 428px;
-    max-height: 926px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 120px auto 80px;
+    .main-wrapper{
+        background-image: url("/static/img/page22.jpeg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        max-width: 428px;
+        max-height: 926px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
 
 /*#main-header {*/
@@ -98,6 +109,7 @@ body{
     position: absolute;
     margin-top: 500px;
     z-index: 2;
+    cursor: pointer;
 }
 
 #msg1 {
@@ -112,6 +124,7 @@ body{
     position: absolute;
     margin-top: 500px;
     z-index: 1;
+    cursor: pointer;
 }
 
 #msg2 {
