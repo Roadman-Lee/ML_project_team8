@@ -30,7 +30,7 @@
         font-family: pokemon;
         font-size: 25px;
         text-align: center;
-        margin:0 0 10% 5%;
+        margin:0 0 10% 4%;
         animation-name: color_change;
         animation-duration: 5s;
         animation-iteration-count: infinite;
