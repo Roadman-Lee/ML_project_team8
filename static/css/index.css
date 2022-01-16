@@ -17,6 +17,7 @@
 @media(max-width: 428px){
     body {
         background-image: none;
+        overflow: hidden;
     }
 
     .main-wrapper{
@@ -73,7 +74,7 @@
     position: absolute;
     background-image: url("/static/img/msgbox.jpg");
     background-size: 100% 100%;
-    bottom: 0;
+    bottom: 5%;
 }
 
 #text {
