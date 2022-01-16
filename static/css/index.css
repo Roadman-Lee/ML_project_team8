@@ -12,6 +12,9 @@
     .main-wrapper {
         background-color: rgba(225, 225, 225, 0);
     }
+    #click_msg{
+        display: none;
+    }
 }
 
 @media(max-width: 428px){
@@ -22,6 +25,23 @@
 
     .main-wrapper{
         background: linear-gradient(rgba(96, 128, 198), rgba(198, 198, 198));
+    }
+    #click_msg{
+        font-family: pokemon;
+        font-size: 25px;
+        text-align: center;
+        margin:0 0 10% 5%;
+        animation-name: color_change;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes color_change {
+        0%{color: grey;}
+        20%{color: lightslategrey;}
+        40%{color: whitesmoke;}
+        60%{color: lightblue;}
+        80%{color: lightgoldenrodyellow;}
+        100%{color: lightslategray;}
     }
 }
 
@@ -34,7 +54,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-
 }
 
 #main-header {
@@ -62,7 +81,7 @@
 }
 
 #droh {
-    margin-top: 30px;
+    margin-top: 10px;
     height: 50%;
     cursor: pointer;
 }
