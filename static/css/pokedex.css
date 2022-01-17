@@ -168,14 +168,16 @@
     background-color: lightblue;
     display: flex;
     justify-content: center; /*사진이미지가 가운데에 오도록*/
+    align-items: center;
     position: absolute;
     margin-top: 5%;
 }
 #dex_upper .img_box #img{
-    width: 99%;
-    height: 100%;
+    width: available;
+    max-height: 200px;
     border: 2px solid grey;
 }
+
 
 /*도감 밑부분*/
 #dex_lower{
