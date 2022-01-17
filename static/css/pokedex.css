@@ -12,9 +12,15 @@
         margin: 10% auto;
         position:relative;
     }
+
     .main_container{
         margin:0 auto;
     }
+    #dex_upper .img_box #img{
+    width: available;
+    max-height: 235px;
+    border: 2px solid grey;
+}
     /*메세지 상자*/
     #msg_container {
         display: flex;
@@ -76,7 +82,11 @@
     }
     #oh_box img{
         width: 100%;
-
+    }
+    #dex_upper .img_box #img{
+        width: available;
+        max-height: 200px;
+        border: 2px solid grey;
     }
     /*메세지 상자*/
     #msg_container {
@@ -171,11 +181,6 @@
     align-items: center;
     position: absolute;
     margin-top: 5%;
-}
-#dex_upper .img_box #img{
-    width: available;
-    max-height: 200px;
-    border: 2px solid grey;
 }
 
 
