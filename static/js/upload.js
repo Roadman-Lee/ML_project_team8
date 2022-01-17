@@ -1,20 +1,27 @@
 
 let sel_file;
 
+// input에 파일이 올라올 때 (input에 change를 트리거할 때) 함수 실행
 $(document).ready(function() {
     $("#input_img").on("change", handleImgFileSelect);
 });
 
 function handleImgFileSelect(e) {
     let files = e.target.files;
+    // =arguments =object (not array)
     let filesArr = Array.prototype.slice.call(files);
+    // 이 코드가 존재하는 함수의 매개변수로 넘어온 값들을 array로 변환
 
     filesArr.forEach(function (f) {
         sel_file = f;
+        // 파일을 읽기 위한 FileReader 객체 생성
         let reader = new FileReader();
+        // 이미지가 로드 되면,
         reader.onload = function (e) {
+            // 이미지 Tag의 SRC 속성에 읽어들인 file 내용을 지정
             $("#img").attr("src", e.target.result);
         }
+        // reader가 file 내용을 읽어 dataURL 형식의 문자열로 저장
         reader.readAsDataURL(f);
     });
 }
