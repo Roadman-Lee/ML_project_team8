@@ -6,8 +6,7 @@
                 url("/static/img/3page_back2.png");
         background-size: 100%;
         background-repeat: no-repeat;
-        /*display: flex;*/
-        /*position:relative;*/
+        overflow: hidden;
         }
     #dex_container{
         margin: 10% auto;
@@ -60,22 +59,24 @@
 @media(max-width:428px){/*모바일화면에서만 보일 친구들*/
     body{
         background-image: none;
+        background-color: lightgrey;
     }
     #dex_container{
-        margin: 0 auto;
+        margin: 10% auto;
         flex:none;
     }
     /*오박사 이미지*/
     #oh_box{
-        margin-top: 30%;
+        margin-top: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
         width:100%;
         max-width: 428px;
     }
-    #oh_img img{
+    #oh_box img{
         width: 100%;
+
     }
     /*메세지 상자*/
     #msg_container {

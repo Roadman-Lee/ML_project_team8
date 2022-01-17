@@ -12,8 +12,10 @@
     .main-wrapper {
         background-color: rgba(225, 225, 225, 0);
     }
-    #click_msg{
-        display: none;
+    #logo {
+        margin-top: 20px;
+        max-width: 100%;
+        max-height: 20%;
     }
 }
 
@@ -25,24 +27,15 @@
 
     .main-wrapper{
         background: linear-gradient(rgba(96, 128, 198), rgba(198, 198, 198));
+        max-width: 428px;
+        max-height: 926px;
     }
-    #click_msg{
-        font-family: pokemon;
-        font-size: 25px;
-        text-align: center;
-        margin:0 0 10% 4%;
-        animation-name: color_change;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
+    #logo{
+        margin-top: 0;
+        max-width: 100%;
+        max-height: 20%;
     }
-    @keyframes color_change {
-        0%{color: grey;}
-        20%{color: lightslategrey;}
-        40%{color: whitesmoke;}
-        60%{color: lightblue;}
-        80%{color: lightgoldenrodyellow;}
-        100%{color: lightslategray;}
-    }
+
 }
 
 .main-wrapper {
@@ -71,35 +64,58 @@
 .main {
     width: 100%;
     height: 100vh;
-    position: relative;
-}
-
-#logo {
-    margin-top: 20px;
-    max-width: 100%;
-    max-height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #droh {
-    margin-top: 10px;
-    height: 50%;
+    height: 40%;
     cursor: pointer;
 }
 
 .msg {
+    max-width: 428px;
     width: 100%;
     height: 150px;
     align-items: center;
-    position: absolute;
-    background-image: url("/static/img/msgbox.jpg");
-    background-size: 100% 100%;
-    bottom: 5%;
-}
+    /*bottom: 2%;*/
 
+
+}
+.msg_img{
+    max-width: 428px;
+    width: 100%;
+    position: relative;
+}
+#box2{
+    max-width: 428px;
+    width:100%;
+    position: absolute;
+}
 #text {
+    max-width: 428px;
     font-family: 'pokemon';
     font-size: x-large;
-    margin-left: 30px;
-    margin-top: 30px;
-    transform: tranlate(-50%, -50%);
+    left: 30px;
+    position: absolute;
+    top: 25px;
+}
+#click_msg{
+    font-family: pokemon;
+    font-size: 25px;
+    text-align: center;
+    margin:0 0 10% 4%;
+    animation-name: color_change;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes color_change {
+    0%{color: grey;}
+    20%{color: lightslategrey;}
+    40%{color: whitesmoke;}
+    60%{color: lightblue;}
+    80%{color: lightgoldenrodyellow;}
+    100%{color: lightslategray;}
 }
