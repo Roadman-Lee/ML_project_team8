@@ -33,3 +33,5 @@
 | 3-2 | (옵션)진화전/후 포켓몬 정보 | GET |  |  |  |  |
 |  |  |  |  |  |  |  |
 
+#### 참고하면 좋은 페이지
+https://github.com/imfing/keras-flask-deploy-webapp
