@@ -14,7 +14,8 @@
             <div class="img_wrap" ><!--onload이벤트로 이미지파일 로드되면 'show_msg()'실행되도록-->
                 <img id="img" onload="show_msg()"/>
             </div>
-             <div id ="input_box">
+            <div id ="input_box">
+                <label for="input_img"><img src="/static/img/pika.png">사진 선택</label>
                 <input type="file" id="input_img"/>
             </div>
         </div>
@@ -26,6 +27,12 @@
         </div>
         <div class="msgbox2" id="pop"><!--zindex적용위해 div로 감쌈-->
             <img id="msg2" src="/static/img/msg2.jpg" onclick="posting_img()">
+        </div>
+    </div>
+    <div class="modal_container">
+        <div class="modal_box">
+            <img src="/static/img/ball.png">
+            <p>결과 분석 중</p>
         </div>
     </div>
 

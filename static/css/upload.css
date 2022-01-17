@@ -7,6 +7,7 @@ body{
     background-size: 100% 100%;
     background-repeat: repeat;
     overflow: hidden;
+    font-family: 'pokemon';
 }
 
 @media(min-width: 429px) {
@@ -107,7 +108,30 @@ body{
     max-height: 100%;
 }
 
-.msgbox1 {/*메세지박스1이미지 감싸는 div*/
+#input_box {
+    margin-bottom: 50%;
+    z-index: 5;
+}
+
+#input_box img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#input_box label {
+  display: inline-block;
+  padding-left: 20px;
+  font-size: large;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#input_box input[type="file"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.msgbox1 {
     max-width: 428px;
     width: 100%;
     height: 15%;
@@ -139,4 +163,41 @@ body{
     max-height: 100%;
     top: 50%;
     left: 50%;
+}
+
+.modal_container {
+    width: 200%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+.modal_container .modal_box {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 250px;
+    height: 250px;
+    z-index: 11;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+
+}
+.modal_container .modal_box img {
+    animation: rotate_image 2s infinite linear;
+    width: 150px;
+    height: 150px;
+    margin: 20px 50px 10px;
+    
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
 }
