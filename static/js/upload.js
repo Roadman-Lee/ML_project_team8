@@ -43,6 +43,7 @@ function box_change(){
 }
 
 function posting_img() {
+    show_modal()
     let d = new Date()
     let time = d.getTime()
     let title = String(time)
@@ -59,9 +60,16 @@ function posting_img() {
         contentType: false,
         processData: false,
         success: function (response) {
-            alert(response["msg"])
-            window.location.href = '/pokedex/' + title
+            // alert(response["msg"])
+            setTimeout(function() {
+                window.location.href = '/pokedex/' + title;
+            }, 2000);
         }
     });
 
+}
+
+function show_modal() {
+    $('.modal_container').show();
+    $('html').css("overflow", "hidden");
 }
