@@ -11,20 +11,20 @@
 {% block main %}
     <div class="main-wrapper">
         <div class="container">
-            <div class="img_wrap" >
-                <img id="img" onload="show_msg()" />
+            <div class="img_wrap" ><!--onload이벤트로 이미지파일 로드되면 'show_msg()'실행되도록-->
+                <img id="img" onload="show_msg()"/>
             </div>
              <div id ="input_box">
                 <input type="file" id="input_img"/>
             </div>
         </div>
-        <div class="cover" id ="bye">
+        <div class="cover" id ="bye"><!--zindex적용위해 div로 감쌈-->
             <img id="grass" src="/static/img/cover.png" >
         </div>
-        <div class="msgbox1">
+        <div class="msgbox1"><!--zindex적용위해 div로 감쌈-->
             <img id="msg1" src="/static/img/msg1.PNG" onclick="box_change()">
         </div>
-        <div class="msgbox2" id="pop">
+        <div class="msgbox2" id="pop"><!--zindex적용위해 div로 감쌈-->
             <img id="msg2" src="/static/img/msg2.jpg" onclick="posting_img()">
         </div>
     </div>

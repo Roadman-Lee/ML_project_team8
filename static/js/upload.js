@@ -20,7 +20,7 @@ function handleImgFileSelect(e) {
 }
 
 function show_msg(){
-    //이미지 사라지는 것을 1초뒤로 딜레이.
+    //풀 이미지 사라지는 것을 1초뒤로 딜레이.
     setTimeout(function(){$('#bye').hide();},1000);
     //이미지 크기 조절 애니메이션
     $('#img').animate({
@@ -31,15 +31,15 @@ function show_msg(){
         }, 200, function () {
             $(this).animate({
                     width: '70%',height:'auto'
-                },
-                300);
+                },300);
         });
     });
 }
 
-function box_change(){
+function box_change(){ //메세지1 클릭시 여기서 메세지2의 zindex를 변경
     var msg2 = document.getElementById('pop');
         msg2.style.zIndex = '5';
+//  document.getElementById('pop').style.zIndex = '5';
 }
 
 function posting_img() {

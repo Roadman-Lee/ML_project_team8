@@ -1,6 +1,7 @@
 @media(min-width: 429px) {
     body {
         background-image: linear-gradient(
+                /*rgba(적색, 녹색, 청색, 투명도) 투명도는 0.0~1.0사이로 지정*/
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.2)),
         url("/static/img/1page.png");
@@ -107,11 +108,12 @@
     font-size: 25px;
     text-align: center;
     margin:0 0 10% 4%;
-    animation-name: color_change;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation-name: color_change; /*애니메이션 걸고싶은 위치에 애니메이션 이름*/
+    animation-duration: 3s;/*재생속도*/
+    animation-iteration-count: infinite; /*재생횟수 infinite는 애니메이션을 무한으로 반복합니다.*/
 }
-@keyframes color_change {
+/**/
+@keyframes color_change {/*키프레임 애니메이션 이름*/
     0%{color: grey;}
     20%{color: lightslategrey;}
     40%{color: whitesmoke;}
@@ -119,3 +121,5 @@
     80%{color: lightgoldenrodyellow;}
     100%{color: lightslategray;}
 }
+/*애니메이션 참고 https://webclub.tistory.com/621 (용어이해)
+https://webclub.tistory.com/621*/
